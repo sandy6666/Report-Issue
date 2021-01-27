@@ -1,0 +1,26 @@
+<?php
+use Sandesh\ReportIssue\Block\Button;
+
+/**
+ * @var Button $block
+ */
+?>
+
+<div class="container">
+    <?php
+    $result = $block->getDetails();
+    if ($result['type'] === 'text') {
+        ?>
+        <form action="<?= $result['url'] ?>" method="post">
+            <input style="background-color: <?= '#' . $result['color'] ?>" type="submit" value="<?= $result['text'] ?>"
+                   class="Report">
+        </form>
+        <?php
+    } else {
+        ?>
+        <a href="<?= $result['url'] ?>"><img class="report-img" alt="report"
+                                             src="<?= $result['media_url'] . '' . $result['image'] ?>"></a>
+        <?php
+    }
+    ?>
+</div>

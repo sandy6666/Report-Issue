@@ -1,0 +1,100 @@
+.submit {
+    border: none;
+    box-shadow: none;
+    background: #3498db;
+    width: 100px;
+    padding: 5px 0;
+    border-radius: 3px;
+    color: white;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.Report {
+    border: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    box-shadow: none;
+    color: white;
+    width: 100px;
+    padding: 8px 0;
+    border-radius: 3px;
+}
+
+.report-img {
+    border: none;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    box-shadow: none;
+    /* background: #3498db; */
+    width: 100px;
+    /* padding: 13px 0; */
+    border-radius: 3px;
+}
+
+input:not([disabled]):focus {
+    box-shadow: none;
+}
+
+.submit:hover {
+    opacity: 0.7;
+}
+
+.issue-details label {
+    display: block;
+    margin: 0px 0px 15px 0px;
+}
+
+.issue-details label > span {
+    width: 100px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.issue-details span.required {
+    color: red;
+}
+
+.issue-details .tel-number-field {
+    width: 40px;
+    text-align: center;
+}
+
+.issue-details input.input-field, .issue-details .select-field {
+    width: 48%;
+}
+
+.issue-details input.input-field,
+.issue-details .tel-number-field,
+.issue-details .textarea-field,
+.issue-details .select-field {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+
+.issue-details .input-field:focus,
+.issue-details .tel-number-field:focus,
+.issue-details .textarea-field:focus,
+.issue-details .select-field:focus {
+    border: 1px solid #0C0;
+}
+
+.issue-details .textarea-field {
+    height: 100px;
+    width: 55%;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Sandesh_ReportIssue" title="Sandesh" module="Magento_Backend" sortOrder="10"
+             resource="Sandesh_ReportIssue::extensions"/>
+        <add id="issues_reported" title="Issues Reported" module="Magento_Backend" sortOrder="0"
+             action="reportissue/index/index" parent="Sandesh_ReportIssue"
+             resource="Sandesh_ReportIssue::extensions"/>
+        <add id="issues_reported_config" title="General Configuration" module="Magento_Backend" sortOrder="0"
+             action="admin/system_config/index" parent="Sandesh_ReportIssue"
+             resource="Sandesh_ReportIssue::extensions"/>
+    </menu>
+</config>

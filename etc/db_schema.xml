@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="reported_issues" resource="default" engine="innodb" comment="Reported Issues">
+        <column xsi:type="int" padding="11" name="id" unsigned="false" nullable="false" identity="true"
+                comment="My ID"/>
+        <column xsi:type="varchar" name="user_name" nullable="false" comment="User Name"/>
+        <column xsi:type="varchar" name="phone_number" nullable="false" comment="Phone Number"/>
+        <column xsi:type="smallint" name="store_id" nullable="false" comment="Store ID"/>
+        <column xsi:type="int" name="magento_customer_id" nullable="false" comment="Magento Customer ID"/>
+        <column xsi:type="varchar" name="magento_customer_name" nullable="false" comment="Magento Customer Name"/>
+        <column xsi:type="varchar" name="email_id" nullable="false" comment="Email ID"/>
+        <column xsi:type="varchar" name="issue_title" nullable="false" comment="Issue Title"/>
+        <column xsi:type="varchar" name="issue_description" nullable="false" comment="Issue Description"/>
+        <column xsi:type="datetime" default="CURRENT_TIMESTAMP" name="reported_time" on_update="false" nullable="true"
+                comment="Reported Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>

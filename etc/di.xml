@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Sandesh\ReportIssue\Api\ReportIssueRepositoryInterface"
+                type="Sandesh\ReportIssue\Model\ReportIssueRepository"/>
+
+    <preference for="Sandesh\ReportIssue\Api\Data\ReportIssueInterface" type="Sandesh\ReportIssue\Model\Data\ReportIssue"/>
+    <virtualType name="Sandesh\ReportIssue\Model\ResourceModel\ReportIssue\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">reported_issues</argument>
+            <argument name="resourceModel" xsi:type="string">Sandesh\ReportIssue\Model\ResourceModel\ReportIssue</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="reportissue_listing_data_source" xsi:type="string">
+                    Sandesh\ReportIssue\Model\ResourceModel\ReportIssue\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

@@ -1,0 +1,59 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sandesh_extension_tab" translate="label" sortOrder="100">
+            <label>Sandesh</label>
+        </tab>
+        <tab id="sandesh" translate="label">
+            <label>Sandesh</label>
+        </tab>
+        <section id="reportedissue" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Report Issues</label>
+            <tab>sandesh</tab>
+            <resource>Sandesh_ReportIssue::report_config</resource>
+            <group id="notify_reported_issue_email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10000" translate="label">
+                <label>Notify Reported Issue </label>
+                <field id="email" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="text">
+                    <label>Email</label>
+                    <comment> Enter email comma separated if you want to send to more than 1 email </comment>
+                </field>
+            </group>
+            <group id="issues" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Report Issue Configuration</label>
+                <field id="type" translate="label comment" sortOrder="6" type="select" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Input Type</label>
+                    <source_model>Sandesh\ReportIssue\Model\Config\Source</source_model>
+                </field>
+                <field id="image" translate="label" type="image" sortOrder="12" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Image</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Sandesh\ReportIssue\Model\SaveImage</backend_model>
+                    <base_url type="media" scope_info="1">sandesh/button</base_url>
+                    <depends>
+                        <field id="type">image</field>
+                    </depends>
+                </field>
+                <field id="text" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                    <depends>
+                        <field id="type">text</field>
+                    </depends>
+                </field>
+                <field id="button_bgcolor" translate="label" type="text" sortOrder="13" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <frontend_model>Sandesh\ReportIssue\Block\Adminhtml\Color</frontend_model>
+                    <depends>
+                        <field id="type">text</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
