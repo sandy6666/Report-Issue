@@ -1,13 +1,13 @@
 {
-  "name": "sandesh/report-issue",
+  "name": "sandesh6/report-issue",
   "version": "1.0.0",
   "description": "N/A",
   "type": "magento2-module",
   "require": {
-    "magento/framework": "*"
+    "magento/framework": "103.0.*"
   },
   "license": [
-    "Proprietary"
+      "Apache-2.0"
   ],
   "autoload": {
     "files": [
