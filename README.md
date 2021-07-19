@@ -1,6 +1,10 @@
 # Report-Issue Extension For Magento 2
 
-### Installation Steps
+### Installation Steps via Composer 
+
+###composer require sandesh6/report-issue
+
+### Installing Manually
 
 #### 1. Extract the downloaded zip file 
 #### 2. Create a directory Sandesh in your magento_base_directory/app/code
