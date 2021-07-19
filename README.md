@@ -2,7 +2,7 @@
 
 ### Installation Steps via Composer 
 
-###composer require sandesh6/report-issue
+### composer require sandesh6/report-issue
 
 ### Installing Manually
 
